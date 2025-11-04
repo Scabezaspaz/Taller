@@ -8,10 +8,11 @@ import inventario.interfaces.IInventoryRepository;
 import inventario.interfaces.IInventoryService;
 
 /**
- * Servicio encargado de la gestión del inventario.
- * Se encarga de encapsular las reglas de negocio relacionadas con la
- * administración de productos, aplicando correctamente el principio SRP.
+ * Servicio responsable de administrar el inventario.
+ * Encapsula las reglas de negocio vinculadas a la gestión de productos,
+ * aplicando de forma adecuada el principio de responsabilidad única (SRP).
  */
+
 public class InventoryServiceImpl implements IInventoryService {
 
     private static final Logger LOGGER = Logger.getLogger(InventoryServiceImpl.class.getName());

@@ -1,21 +1,23 @@
 package inventario.model;
 
 /**
- * Representa un elemento dentro de una orden,
- * permitiendo manejar múltiples productos por pedido.
+ * Modela un elemento perteneciente a una orden,
+ * permitiendo gestionar varios productos dentro de un mismo pedido.
  *
- * Ayuda a mejorar la cohesión del sistema al separar responsabilidades
- * que anteriormente estaban mezcladas en cadenas de texto sin estructura.
+ * Favorece la cohesión del sistema al dividir responsabilidades
+ * que antes se encontraban combinadas en cadenas de texto sin estructura.
  */
+
 public class OrderItem {
 
     private String productId;
     private int quantity;
 
     /**
-     * @param productId Identificador del producto.
-     * @param quantity  Cantidad asociada a ese producto.
+     * @param productId ID que identifica el producto.
+     * @param quantity  Número de unidades vinculadas a ese producto.
      */
+
     public OrderItem(String productId, int quantity) {
         if (productId == null || productId.isBlank()) {
             throw new IllegalArgumentException("Product ID cannot be null or empty.");

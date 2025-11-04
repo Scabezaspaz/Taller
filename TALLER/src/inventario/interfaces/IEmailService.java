@@ -4,19 +4,20 @@ package inventario.interfaces;
 import inventario.model.Order;
 
 /**
- * Servicio encargado del envío de confirmaciones o notificaciones por correo.
+ * Servicio responsable de enviar correos de confirmación o notificación.
  *
- * Uso aplicado del principio de inversión d
- * e dependencias (DIP),
- * evitando acoplamiento directo con la infraestructura.
+ * Implementa el principio de inversión de dependencias (DIP),
+ * reduciendo el acoplamiento directo con la capa de infraestructura.
  */
+
 public interface IEmailService {
 
     /**
-     * Envía un correo con la confirmación de la orden.
+     * Envía un correo electrónico para confirmar una orden.
      *
-     * @param email Dirección de correo del destinatario.
-     * @param order Orden asociada a la notificación.
+     * @param email Correo electrónico del destinatario.
+     * @param order Pedido vinculado a la notificación.
      */
+
     void sendOrderConfirmation(String email, Order order);
 }

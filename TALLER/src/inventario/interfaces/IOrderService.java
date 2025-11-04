@@ -4,12 +4,14 @@ package inventario.interfaces;
 import inventario.model.Order;
 
 /**
- * Define las funcionalidades de creación y administración de órdenes.
+ * Especifica las funciones relacionadas con la creación y gestión de órdenes.
  */
+
 public interface IOrderService {
 
     /**
-     * Crea una nueva orden y la almacena en el sistema.
+     * Genera una nueva orden y la guarda dentro del sistema.
      */
+
     void createOrder(Order order);
 }

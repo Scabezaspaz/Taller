@@ -8,11 +8,12 @@ import inventario.interfaces.IInventoryRepository;
 
 
 /**
- * Implementación del repositorio de inventario utilizando almacenamiento en memoria.
+ * Implementación del repositorio de inventario basada en almacenamiento en memoria.
  *
- * Esta clase elimina antipatrones como Hard Code y God Object
- * al separar la lógica de acceso a datos de la lógica de negocio.
+ * Esta clase evita antipatrones como Hard Code y God Object
+ * al mantener separadas la lógica de datos y la lógica de negocio.
  */
+
 public class InventoryRepositoryImpl implements IInventoryRepository {
 
     private static final Logger LOGGER = Logger.getLogger(InventoryRepositoryImpl.class.getName());

@@ -3,20 +3,23 @@ package inventario.interfaces;
 import inventario.model.Product;
 
 /**
- * Define las operaciones de acceso a datos relacionadas con el inventario.
- * Esta interfaz permite desacoplar la capa de datos de la lógica del negocio,
- * eliminando el uso de estructuras sin modelo de dominio y evitando antipatrones
- * como God Object y Spaghetti Code.
+ * Declara las operaciones para el acceso a datos del inventario.
+ * Esta interfaz facilita el desacoplamiento entre la capa de datos y la lógica de negocio,
+ * previniendo el uso de estructuras fuera del modelo de dominio y evitando antipatrones
+ * como God Object o Spaghetti Code.
  */
+
 public interface IInventoryRepository {
 
     /**
-     * Busca un producto por su identificador.
+     * Recupera un producto utilizando su identificador único.
      */
+
     Product findProductById(String productId);
 
     /**
-     * Guarda o actualiza un producto en el inventario.
+     * Registra o modifica un producto dentro del inventario.
      */
+
     void saveProduct(Product product);
 }

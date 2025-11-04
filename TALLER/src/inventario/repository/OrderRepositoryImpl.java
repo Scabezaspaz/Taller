@@ -6,11 +6,12 @@ import java.util.logging.Logger;
 import inventario.interfaces.IOrderRepository;
 import inventario.model.Order;
 /**
- * Repositorio para la gestión de órdenes utilizando almacenamiento en memoria.
+ * Repositorio encargado de administrar las órdenes mediante almacenamiento en memoria.
  *
- * Este diseño cumple con SRP y evita el antipatrón Low Cohesion
- * al definir una única responsabilidad claramente delimitada.
+ * Este enfoque sigue el principio de responsabilidad única (SRP)
+ * y previene el antipatrón de baja cohesión al mantener una función claramente definida.
  */
+
 public class OrderRepositoryImpl implements IOrderRepository {
 
     private static final Logger LOGGER = Logger.getLogger(OrderRepositoryImpl.class.getName());
@@ -27,10 +28,11 @@ public class OrderRepositoryImpl implements IOrderRepository {
     }
 
     /**
-     * Método de apoyo para debugging y pruebas.
+     * Método auxiliar para depuración y pruebas.
      *
-     * @return Lista de órdenes en memoria.
+     * @return Lista de órdenes almacenadas en memoria.
      */
+
     public List<Order> getAllOrders() {
         return orderStorage;
     }

@@ -3,17 +3,19 @@ package inventario.interfaces;
 import inventario.model.Order;
 
 /**
- * Interfaz que abstrae la gestión de almacenamiento de órdenes.
+ * Interfaz que abstrae la administración del almacenamiento de órdenes.
  *
- * Colabora en eliminar el antipatrón Low Cohesion al estructurar
- * correctamente el manejo de pedidos.
+ * Contribuye a evitar el antipatrón de baja cohesión al organizar
+ * adecuadamente la gestión de pedidos.
  */
+
 public interface IOrderRepository {
 
     /**
-     * Guarda una nueva orden en el repositorio.
+     * Registra una nueva orden en el repositorio.
      *
-     * @param order Orden a registrar.
+     * @param order Pedido que se desea almacenar.
      */
+
     void saveOrder(Order order);
 }

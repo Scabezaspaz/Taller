@@ -5,11 +5,12 @@ import inventario.model.Order;
 import java.util.logging.Logger;
 
 /**
- * Implementación del servicio de envío de notificaciones.
+ * Implementación del servicio encargado del envío de notificaciones.
  *
- * Cumple con el principio DIP desacoplando totalmente el envío
- * de cualquier cliente que requiera notificaciones.
+ * Aplica el principio de inversión de dependencias (DIP),
+ * desacoplando completamente el proceso de envío de los clientes que lo utilizan.
  */
+
 public class EmailServiceImpl implements IEmailService {
 
     private static final Logger LOGGER = Logger.getLogger(EmailServiceImpl.class.getName());

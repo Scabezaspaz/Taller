@@ -6,10 +6,11 @@ import inventario.interfaces.IInventoryRepository;
 import inventario.interfaces.ISaleService;
 
 /**
- * Servicio responsable del registro de ventas.
- * Separa la lógica que anteriormente estaba mezclada en una misma clase
- * (eliminando God Object y Spaghetti Code).
+ * Servicio encargado del registro de ventas.
+ * Aísla la lógica que antes se encontraba combinada en una sola clase,
+ * evitando antipatrones como God Object y Spaghetti Code.
  */
+
 public class SaleServiceImpl implements ISaleService {
 
     private static final Logger LOGGER = Logger.getLogger(SaleServiceImpl.class.getName());

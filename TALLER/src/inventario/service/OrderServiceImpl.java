@@ -6,11 +6,12 @@ import inventario.interfaces.IOrderRepository;
 import inventario.interfaces.IOrderService;
 
 /**
- * Servicio para la gestión de órdenes de compra.
+ * Servicio encargado de la administración de las órdenes de compra.
  *
- * Mantiene alta cohesión al gestionar exclusivamente
- * la lógica del ciclo de vida de las órdenes.
+ * Conserva una alta cohesión al enfocarse únicamente
+ * en la lógica relacionada con el ciclo de vida de las órdenes.
  */
+
 public class OrderServiceImpl implements IOrderService {
 
     private static final Logger LOGGER = Logger.getLogger(OrderServiceImpl.class.getName());

@@ -73,12 +73,12 @@ public class Main {
                     case 3 -> crearOrden(scanner, orderService);
                     case 4 -> consultarStock(scanner, inventoryService);
                     case 5 -> enviarConfirmacion(scanner, emailService);
-                    case 0 -> LOGGER.info("✅ Sistema finalizado correctamente.");
-                    default -> LOGGER.warning("❌ Opción inválida. Intente nuevamente.");
+                    case 0 -> LOGGER.info("Sistema finalizado correctamente.");
+                    default -> LOGGER.warning("Opción inválida. Intente nuevamente.");
                 }
 
             } catch (Exception e) {
-                LOGGER.log(Level.SEVERE, "⚠️ Error: Entrada inválida o fallo en la operación.", e);
+                LOGGER.log(Level.SEVERE, "Error: Entrada inválida o fallo en la operación.", e);
                 scanner.nextLine(); // limpiar buffer si ocurre error
                 option = -1; // para continuar el ciclo
             }
@@ -97,7 +97,7 @@ public class Main {
         int qty = scanner.nextInt();
         scanner.nextLine();
         inventoryService.addProduct(pId, qty);
-        LOGGER.info("✅ Producto agregado correctamente.");
+        LOGGER.info(" Producto agregado correctamente.");
     }
 
     private static void registrarVenta(Scanner scanner, ISaleService saleService) {
@@ -107,7 +107,7 @@ public class Main {
         int qty = scanner.nextInt();
         scanner.nextLine();
         saleService.registerSale(pId, qty);
-        LOGGER.info("✅ Venta registrada correctamente.");
+        LOGGER.info(" Venta registrada correctamente.");
     }
 
     private static void crearOrden(Scanner scanner, IOrderService orderService) {
@@ -125,14 +125,14 @@ public class Main {
             more = scanner.nextLine();
         } while (more.equalsIgnoreCase("s"));
         orderService.createOrder(order);
-        LOGGER.info("✅ Orden creada correctamente.");
+        LOGGER.info(" Orden creada correctamente.");
     }
 
     private static void consultarStock(Scanner scanner, IInventoryService inventoryService) {
         LOGGER.info("ID producto: ");
         String pId = scanner.nextLine();
         int stock = inventoryService.getStock(pId);
-        LOGGER.log(Level.INFO, "📦 Stock actual de {0}: {1}", new Object[]{pId, stock});
+        LOGGER.log(Level.INFO, " Stock actual de {0}: {1}", new Object[]{pId, stock});
     }
 
     private static void enviarConfirmacion(Scanner scanner, IEmailService emailService) {
@@ -141,6 +141,6 @@ public class Main {
         Order order = new Order();
         order.addItem(new OrderItem("TEMP", 1)); // Simulación mínima
         emailService.sendOrderConfirmation(email, order);
-        LOGGER.log(Level.INFO, "📧 Confirmación enviada a: {0}", email);
+        LOGGER.log(Level.INFO, "Confirmación enviada a: {0}", email);
     }
 }

@@ -2,20 +2,22 @@ package inventario.model;
 
 
 /**
- * Representa un producto dentro del inventario.
- * Esta clase sustituye la mala práctica del uso de Maps con datos sueltos,
- * implementando un modelo de dominio real que encapsula el estado y las
- * reglas del producto. Evita antipatrones como Hard Code, Temporary Field
- * y falta de dominio.
+ * Modela un producto perteneciente al inventario.
+ * Esta clase reemplaza la mala práctica de emplear Maps con datos dispersos,
+ * incorporando un modelo de dominio que encapsula tanto el estado como
+ * las reglas del producto. Previene antipatrones como Hard Code, Temporary Field
+ * y ausencia de modelo de dominio.
  */
+
 public class Product {
 
     private String id;
     private int stock;
 
     /**
-     * Constructor para crear un nuevo producto.
+     * Constructor utilizado para instanciar un nuevo producto.
      */
+
     public Product(String id, int stock) {
         if (id == null || id.isBlank()) {
             throw new IllegalArgumentException("Product ID cannot be null or empty.");
@@ -36,8 +38,9 @@ public class Product {
     }
 
     /**
-     * Aumenta el stock del producto.
+     * Incrementa la cantidad de stock del producto.
      */
+
     public void addStock(int quantity) {
         if (quantity <= 0) {
             throw new IllegalArgumentException("Quantity must be greater than zero.");
@@ -46,8 +49,9 @@ public class Product {
     }
 
     /**
-     * Resta stock del producto si es suficiente.
+     * Disminuye el stock del producto, siempre que haya cantidad suficiente disponible.
      */
+
     public boolean deductStock(int quantity) {
         if (quantity <= 0) {
             throw new IllegalArgumentException("Quantity must be greater than zero.");

@@ -1,18 +1,20 @@
 package inventario.interfaces;
 
 /**
- * Define los servicios relacionados con la gestión del inventario.
+ * Especifica los servicios responsables de la gestión del inventario.
  */
+
 public interface IInventoryService {
 
     /**
-     * Agrega una cantidad al stock de un producto.
-     *
+     * Incrementa la cantidad disponible en el stock de un producto.
      */
+
     void addProduct(String productId, int quantity);
 
     /**
-     * Obtiene el stock disponible para un producto.
+     * Recupera la cantidad de stock disponible de un producto.
      */
+
     int getStock(String productId);
 }
